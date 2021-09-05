@@ -149,6 +149,9 @@ img {
     color: var(--white);
   }
 }
+.navigation__link--white {
+  color: var(--white);
+}
 
 .nucleus {
   margin-block-start: 3rem;
@@ -271,4 +274,19 @@ img {
 }
 .testimonial__author::before {
   content: '- ';
+}
+
+.footer {
+  padding-block: 3rem;
+  background: #5a30a0;
+}
+.footer__logo {
+  inline-size: 20rem;
+  margin-block: 0 4rem;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin-block: 0;
+  }
 }
