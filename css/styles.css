@@ -39,7 +39,7 @@ img {
   max-inline-size: 100%;
   display: block;
 }
-.container {
+[class$='__container'] {
   max-inline-size: 120rem;
   margin-inline: auto;
   inline-size: 90%;
@@ -66,11 +66,6 @@ img {
   .header {
     background-size: 110rem;
   }
-}
-.header__container {
-  max-inline-size: 120rem;
-  margin-inline: auto;
-  inline-size: 90%;
 }
 @media (min-width: 768px) {
   .header__navigation {
@@ -144,4 +139,45 @@ img {
   .navigation__link {
     color: var(--white);
   }
+}
+
+.nucleus {
+  margin-block-start: 3rem;
+}
+.nucleus__heading {
+  margin-block-end: 5rem;
+  text-align: center;
+}
+.nucleus__grid {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .nucleus__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5rem;
+    align-items: center;
+  }
+}
+
+.list__element {
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.06);
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  margin-block-end: 5rem;
+  transition: transform 0.3s ease-in;
+}
+.list__element:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.03);
+}
+.list__heading {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--colorPrimary);
+}
+.list__text {
+  margin: 0;
+  font-size: 2rem;
 }
