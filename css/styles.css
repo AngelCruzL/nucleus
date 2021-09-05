@@ -1,8 +1,9 @@
 :root {
-  --primario: #6834a6;
-  --blanco: #fff;
-  --negro: #000000;
-  --fuentePrincipal: 'Poppins', sans-serif;
+  --fontPrimary: 'Poppins', sans-serif;
+  --fontBody: 1.6rem / 1.8 var(--fontPrimary);
+  --colorPrimary: #6834a6;
+  --white: #fff;
+  --black: #000000;
 }
 html {
   font-size: 62.5%;
@@ -14,15 +15,13 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: var(--fuentePrincipal);
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font: var(--fontBody);
 }
 h1,
 h2,
 h3 {
   font-weight: 900;
-  margin: 2rem 0;
+  margin-block: 2rem;
 }
 h1 {
   font-size: 5rem;
@@ -37,11 +36,55 @@ a {
   text-decoration: none;
 }
 img {
-  max-width: 100%;
+  max-inline-size: 100%;
   display: block;
 }
-.contenedor {
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 90%;
+.container {
+  max-inline-size: 120rem;
+  margin-inline: auto;
+  inline-size: 90%;
+}
+
+.header {
+  background-image: url(../img/header_bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 10rem;
+  padding-block: 5rem;
+}
+@media (min-width: 768px) {
+  .header {
+    background-size: 45rem;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    background-size: 60rem;
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    background-size: 130rem;
+  }
+}
+.header__container {
+  max-inline-size: 120rem;
+  margin-inline: auto;
+  inline-size: 90%;
+}
+@media (min-width: 768px) {
+  .header__navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  inline-size: 15rem;
+  margin-block: 0 3rem;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+  }
 }
