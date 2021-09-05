@@ -54,7 +54,7 @@ img {
 }
 @media (min-width: 768px) {
   .header {
-    background-size: 45rem;
+    background-size: 50rem;
   }
 }
 @media (min-width: 992px) {
@@ -64,7 +64,7 @@ img {
 }
 @media (min-width: 1280px) {
   .header {
-    background-size: 130rem;
+    background-size: 110rem;
   }
 }
 .header__container {
@@ -86,5 +86,26 @@ img {
 @media (min-width: 768px) {
   .header__logo {
     margin: 0;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+.navigation__link {
+  color: var(--colorPrimary);
+}
+@media (min-width: 768px) {
+  .navigation__link {
+    color: var(--white);
   }
 }
