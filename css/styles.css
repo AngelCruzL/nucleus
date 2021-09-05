@@ -87,6 +87,42 @@ img {
   .header__logo {
     margin: 0;
   }
+  .header__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+  }
+}
+.header__heading {
+  text-align: center;
+  font-size: 3rem;
+}
+@media (min-width: 768px) {
+  .header__heading {
+    text-align: start;
+    font-size: 5rem;
+    line-height: 1.2;
+  }
+  .header__image {
+    max-inline-size: 30rem;
+    margin-inline: auto;
+  }
+}
+.header__button {
+  display: block;
+  padding: 1rem;
+  margin-block-end: 4rem;
+  background: var(--colorPrimary);
+  text-align: center;
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .header__button {
+    display: inline-block;
+    padding-block: 1.5rem;
+    padding-inline: 3rem;
+  }
 }
 
 .navigation {
