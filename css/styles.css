@@ -48,6 +48,14 @@ img {
   margin-block-end: 5rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  [class$='__grid'] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    align-items: center;
+  }
+}
 
 .header {
   background-image: url(../img/header_bg.svg);
@@ -87,10 +95,8 @@ img {
     margin: 0;
   }
   .header__grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    align-items: center;
   }
 }
 .header__heading {
@@ -155,8 +161,6 @@ img {
   .nucleus__grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 5rem;
-    align-items: center;
   }
 }
 
@@ -193,12 +197,4 @@ img {
 }
 .security__heading {
   color: var(--white);
-}
-@media (min-width: 768px) {
-  .security__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
-    align-items: center;
-  }
 }
